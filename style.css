@@ -1,0 +1,1335 @@
+/* =========================================================
+   NEXUS AUTH UI
+   HTML + CSS + BOOTSTRAP
+========================================================= */
+
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --bg: #070a0f;
+    --bg-soft: #0b1017;
+
+    --panel: rgba(14, 21, 30, 0.88);
+
+    --text: #f4f7fb;
+    --text-soft: #9aa7b8;
+    --text-muted: #667384;
+
+    --cyan: #22d3ee;
+    --blue: #3b82f6;
+
+    --border: rgba(255, 255, 255, 0.085);
+
+    --border-hover: rgba(34, 211, 238, 0.35);
+
+    --input: rgba(255, 255, 255, 0.035);
+
+    --radius: 18px;
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family: "Inter", sans-serif;
+
+    color: var(--text);
+
+    background: var(--bg);
+
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* =========================================================
+   AUTH WRAPPER
+========================================================= */
+
+.auth-wrapper {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(34, 211, 238, 0.045),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(59, 130, 246, 0.045),
+            transparent 35%
+        ),
+        var(--bg);
+}
+
+
+/* =========================================================
+   GRID BACKGROUND
+========================================================= */
+
+.grid-background {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.28;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.025) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    mask-image:
+        radial-gradient(
+            ellipse at center,
+            black 20%,
+            transparent 80%
+        );
+}
+
+
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.glow {
+
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    filter: blur(120px);
+
+    opacity: 0.11;
+
+    pointer-events: none;
+}
+
+.glow-one {
+
+    top: -220px;
+    left: -150px;
+
+    background: var(--cyan);
+}
+
+.glow-two {
+
+    right: -180px;
+    bottom: -220px;
+
+    background: var(--blue);
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.auth-container {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   BRAND SECTION
+========================================================= */
+
+.brand-section {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+    padding: 70px 8%;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   BRAND CONTENT
+========================================================= */
+
+.brand-content {
+
+    width: 100%;
+
+    max-width: 570px;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    color: var(--text);
+
+    text-decoration: none;
+
+    margin-bottom: 105px;
+}
+
+.brand-mark {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 39px;
+    height: 39px;
+
+    border: 1px solid rgba(34, 211, 238, 0.28);
+
+    border-radius: 11px;
+
+    color: #071015;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cyan),
+            #67e8f9
+        );
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 0 30px rgba(34, 211, 238, 0.12);
+}
+
+.brand-name {
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    letter-spacing: -0.7px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 25px;
+
+    color: #718094;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.status-dot {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--cyan);
+
+    box-shadow:
+        0 0 12px rgba(34, 211, 238, 0.8);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-content h1 {
+
+    max-width: 550px;
+
+    margin: 0;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px, 5vw, 74px);
+
+    line-height: 0.98;
+
+    font-weight: 600;
+
+    letter-spacing: -3.5px;
+}
+
+.hero-content h1 span {
+
+    display: block;
+
+    color: transparent;
+
+    background:
+        linear-gradient(
+            100deg,
+            var(--cyan),
+            #60a5fa
+        );
+
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.hero-content p {
+
+    max-width: 490px;
+
+    margin-top: 28px;
+
+    color: var(--text-soft);
+
+    font-size: 15px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   MINI FEATURES
+========================================================= */
+
+.mini-features {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 55px;
+}
+
+.mini-feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    min-width: 190px;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.018);
+}
+
+.feature-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+    height: 32px;
+
+    border-radius: 9px;
+
+    color: var(--cyan);
+
+    background: rgba(34, 211, 238, 0.07);
+
+    font-size: 15px;
+}
+
+.mini-feature strong {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.mini-feature small {
+
+    color: var(--text-muted);
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   SYSTEM STATUS
+========================================================= */
+
+.system-status {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 80px;
+
+    color: #657284;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    letter-spacing: 0.4px;
+}
+
+.status-indicator {
+
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #34d399;
+
+    box-shadow:
+        0 0 10px rgba(52, 211, 153, 0.65);
+}
+
+.status-separator {
+
+    width: 3px;
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #3b4655;
+}
+
+
+/* =========================================================
+   FORM SECTION
+========================================================= */
+
+.form-section {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 100vh;
+
+    padding: 50px 7%;
+}
+
+
+/* =========================================================
+   FORM WRAPPER
+========================================================= */
+
+.form-wrapper {
+
+    width: 100%;
+
+    max-width: 480px;
+}
+
+
+/* =========================================================
+   AUTH PANEL
+========================================================= */
+
+.auth-panel {
+
+    position: relative;
+
+    padding: 42px;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    background: var(--panel);
+
+    box-shadow:
+        0 35px 80px rgba(0, 0, 0, 0.28);
+
+    backdrop-filter: blur(20px);
+
+    -webkit-backdrop-filter: blur(20px);
+}
+
+
+/* subtle top highlight */
+
+.auth-panel::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+
+    left: 70px;
+    right: 70px;
+
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(34, 211, 238, 0.5),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   MOBILE BRAND
+========================================================= */
+
+.mobile-brand {
+
+    display: none;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+
+    margin-bottom: 34px;
+}
+
+.welcome-icon {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    margin-bottom: 22px;
+
+    border: 1px solid rgba(34, 211, 238, 0.18);
+
+    border-radius: 10px;
+
+    color: var(--cyan);
+
+    background: rgba(34, 211, 238, 0.05);
+
+    font-size: 17px;
+}
+
+.panel-header h2 {
+
+    margin: 0 0 9px;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 29px;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+}
+
+.panel-header p {
+
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FIELD GROUP
+========================================================= */
+
+.field-group {
+
+    margin-bottom: 21px;
+}
+
+.field-group label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #c5ced9;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   LABEL ROW
+========================================================= */
+
+.label-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+}
+
+.label-row label {
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   INPUT WRAPPER
+========================================================= */
+
+.input-wrapper {
+
+    position: relative;
+}
+
+
+/* =========================================================
+   INPUT ICON
+========================================================= */
+
+.input-icon {
+
+    position: absolute;
+
+    top: 50%;
+    left: 15px;
+
+    transform: translateY(-50%);
+
+    z-index: 3;
+
+    color: #617083;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   INPUT
+========================================================= */
+
+.custom-input {
+
+    height: 50px;
+
+    padding: 0 15px 0 42px !important;
+
+    color: var(--text) !important;
+
+    background: var(--input) !important;
+
+    border: 1px solid var(--border) !important;
+
+    border-radius: 11px !important;
+
+    font-size: 12px !important;
+
+    box-shadow: none !important;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.custom-input::placeholder {
+
+    color: #505d6e !important;
+}
+
+.custom-input:hover {
+
+    border-color:
+        rgba(255, 255, 255, 0.14) !important;
+}
+
+.custom-input:focus {
+
+    border-color:
+        rgba(34, 211, 238, 0.55) !important;
+
+    background:
+        rgba(34, 211, 238, 0.025) !important;
+
+    box-shadow:
+        0 0 0 3px rgba(34, 211, 238, 0.07),
+        0 0 25px rgba(34, 211, 238, 0.035) !important;
+}
+
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.text-link {
+
+    color: #6fb8c7;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.text-link:hover {
+
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   REMEMBER
+========================================================= */
+
+.remember-row {
+
+    margin: 4px 0 22px;
+}
+
+.custom-check {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.custom-check .form-check-input {
+
+    width: 15px;
+    height: 15px;
+
+    margin: 0;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.16);
+
+    background-color:
+        rgba(255, 255, 255, 0.025);
+
+    box-shadow: none;
+}
+
+.custom-check .form-check-input:checked {
+
+    background-color: var(--cyan);
+
+    border-color: var(--cyan);
+}
+
+.custom-check .form-check-input:focus {
+
+    box-shadow:
+        0 0 0 3px rgba(34, 211, 238, 0.08);
+}
+
+.custom-check label {
+
+    color: #748193;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   AUTH BUTTON
+========================================================= */
+
+.auth-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+
+    height: 50px;
+
+    padding: 0 17px !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+
+    border-radius: 11px !important;
+
+    color: #041014 !important;
+
+    background:
+        linear-gradient(
+            100deg,
+            #22d3ee,
+            #60a5fa
+        ) !important;
+
+    font-size: 12px !important;
+
+    font-weight: 700 !important;
+
+    box-shadow:
+        0 10px 30px rgba(34, 211, 238, 0.10) !important;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease !important;
+}
+
+.auth-button:hover {
+
+    color: #041014 !important;
+
+    transform: translateY(-2px);
+
+    filter: brightness(1.07);
+
+    box-shadow:
+        0 15px 35px rgba(34, 211, 238, 0.17) !important;
+}
+
+.auth-button:active {
+
+    transform: translateY(0);
+}
+
+.button-arrow {
+
+    font-size: 17px;
+
+    transition: transform 0.2s ease;
+}
+
+.auth-button:hover .button-arrow {
+
+    transform: translateX(4px);
+}
+
+
+/* =========================================================
+   DIVIDER
+========================================================= */
+
+.or-divider {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin: 27px 0 18px;
+
+    color: #4e5b6b;
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.or-divider::before,
+.or-divider::after {
+
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(255, 255, 255, 0.065);
+}
+
+
+/* =========================================================
+   SOCIAL BUTTONS
+========================================================= */
+
+.social-buttons {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.social-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    height: 45px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    color: #a8b3c2;
+
+    background:
+        rgba(255, 255, 255, 0.018);
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.social-button:hover {
+
+    color: var(--text);
+
+    background:
+        rgba(255, 255, 255, 0.045);
+
+    border-color:
+        rgba(255, 255, 255, 0.15);
+
+    transform: translateY(-1px);
+}
+
+.social-logo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 21px;
+    height: 21px;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.google-logo {
+
+    color: #f8fafc;
+}
+
+.github-logo {
+
+    color: #f8fafc;
+
+    font-size: 7px;
+}
+
+
+/* =========================================================
+   ACCOUNT SWITCH
+========================================================= */
+
+.account-switch {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    margin-top: 27px;
+
+    color: #5f6c7d;
+
+    font-size: 10px;
+}
+
+.account-switch a {
+
+    color: #83d9e6;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: color 0.2s ease;
+}
+
+.account-switch a:hover {
+
+    color: var(--cyan);
+}
+
+.account-switch a span {
+
+    display: inline-block;
+
+    transition: transform 0.2s ease;
+}
+
+.account-switch a:hover span {
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FORM FOOTER
+========================================================= */
+
+.form-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 20px;
+
+    color: #414c5b;
+
+    font-size: 9px;
+}
+
+.form-footer div {
+
+    display: flex;
+
+    gap: 15px;
+}
+
+.form-footer a {
+
+    color: #536071;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.form-footer a:hover {
+
+    color: #8290a2;
+}
+
+
+/* =========================================================
+   SIGNUP PAGE
+========================================================= */
+
+.signup-wrapper .auth-panel {
+
+    padding-top: 37px;
+    padding-bottom: 37px;
+}
+
+.signup-benefits {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-top: 50px;
+}
+
+.benefit-item {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+.benefit-number {
+
+    color: #4e5c6d;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.benefit-item strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+.benefit-item small {
+
+    color: #657284;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.password-hint {
+
+    margin-top: 7px;
+
+    color: #4f5d6d;
+
+    font-size: 8px;
+}
+
+.terms-row {
+
+    margin: 3px 0 20px;
+}
+
+.terms-row .custom-check {
+
+    align-items: flex-start;
+}
+
+.terms-row label {
+
+    line-height: 1.6;
+}
+
+.terms-row a {
+
+    color: #80d6e4;
+
+    text-decoration: none;
+}
+
+.terms-row a:hover {
+
+    color: var(--cyan);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .brand-section {
+
+        display: none;
+    }
+
+    .form-section {
+
+        width: 100%;
+
+        min-height: 100vh;
+
+        padding: 35px 20px;
+    }
+
+    .mobile-brand {
+
+        display: flex;
+    }
+
+    .form-wrapper {
+
+        max-width: 500px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .form-section {
+
+        padding: 20px 14px;
+    }
+
+    .auth-panel {
+
+        padding: 30px 22px;
+
+        border-radius: 15px;
+    }
+
+    .panel-header h2 {
+
+        font-size: 25px;
+    }
+
+    .panel-header p {
+
+        font-size: 12px;
+    }
+
+    .social-buttons {
+
+        grid-template-columns: 1fr;
+    }
+
+    .account-switch {
+
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .form-footer {
+
+        padding: 0 4px;
+    }
+
+    .hero-content h1 {
+
+        font-size: 48px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+    }
+}
