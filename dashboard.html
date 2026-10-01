@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | Nexus Technologies</title>
+
+    <!-- Bootstrap 5 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    >
+
+    <!-- Shared CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+            <div class="container">
+
+                <a
+                    class="navbar-brand fw-bold"
+                    href="index.html"
+                >
+                    <i class="bi bi-cpu"></i>
+                    NEXUS
+                </a>
+
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar"
+                    aria-controls="mainNavbar"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+
+                    <span class="navbar-toggler-icon"></span>
+
+                </button>
+
+
+                <div
+                    class="collapse navbar-collapse"
+                    id="mainNavbar"
+                >
+
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="index.html"
+                            >
+                                Home
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link active"
+                                href="dashboard.html"
+                            >
+                                Dashboard
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="signup.html"
+                            >
+                                Sign Up
+                            </a>
+
+                        </li>
+
+
+                        <li class="nav-item">
+
+                            <a
+                                class="nav-link"
+                                href="login.html"
+                            >
+                                Login
+                            </a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             DASHBOARD HEADER
+             ================================================= -->
+
+        <section class="py-5">
+
+            <div class="container">
+
+                <div class="row align-items-center g-4">
+
+                    <div class="col-lg-8">
+
+                        <span class="badge rounded-pill text-bg-primary mb-3">
+
+                            <i class="bi bi-speedometer2 me-1"></i>
+
+                            Employee Dashboard
+
+                        </span>
+
+
+                        <h1 class="display-5 fw-bold">
+
+                            Welcome to the
+                            <span class="text-primary">
+                                Nexus Dashboard
+                            </span>
+
+                        </h1>
+
+
+                        <p class="lead text-secondary mt-3">
+
+                            View employee information, workforce
+                            statistics and current employee status
+                            from one centralized dashboard.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="col-lg-4">
+
+                        <div class="hero-card rounded-4 p-4">
+
+                            <div
+                                class="d-flex justify-content-between align-items-center"
+                            >
+
+                                <div>
+
+                                    <small class="text-secondary">
+                                        Dashboard Status
+                                    </small>
+
+                                    <h5 class="mb-0 mt-1">
+                                        System Operational
+                                    </h5>
+
+                                </div>
+
+
+                                <div>
+
+                                    <span class="badge text-bg-success">
+                                        Online
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUMMARY CARDS
+             ================================================= -->
+
+        <section class="pb-5">
+
+            <div class="container">
+
+                <div class="row g-4">
+
+
+                    <!-- TOTAL EMPLOYEES -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div class="service-card h-100 rounded-4 p-4">
+
+                            <div
+                                class="d-flex justify-content-between align-items-start"
+                            >
+
+                                <div>
+
+                                    <p class="text-secondary mb-2">
+                                        Total Employees
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        12
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="icon-box">
+
+                                    <i class="bi bi-people"></i>
+
+                                </div>
+
+                            </div>
+
+                            <small class="text-secondary d-block mt-3">
+
+                                <i class="bi bi-arrow-up text-success"></i>
+
+                                Workforce overview
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ACTIVE -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div class="service-card h-100 rounded-4 p-4">
+
+                            <div
+                                class="d-flex justify-content-between align-items-start"
+                            >
+
+                                <div>
+
+                                    <p class="text-secondary mb-2">
+                                        Active
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        7
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="icon-box">
+
+                                    <i class="bi bi-person-check"></i>
+
+                                </div>
+
+                            </div>
+
+                            <small class="text-secondary d-block mt-3">
+
+                                <span class="text-success">
+                                    Currently active
+                                </span>
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- REMOTE -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div class="service-card h-100 rounded-4 p-4">
+
+                            <div
+                                class="d-flex justify-content-between align-items-start"
+                            >
+
+                                <div>
+
+                                    <p class="text-secondary mb-2">
+                                        Remote
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        3
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="icon-box">
+
+                                    <i class="bi bi-house-check"></i>
+
+                                </div>
+
+                            </div>
+
+                            <small class="text-secondary d-block mt-3">
+
+                                Working remotely
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ON LEAVE -->
+
+                    <div class="col-sm-6 col-xl-3">
+
+                        <div class="service-card h-100 rounded-4 p-4">
+
+                            <div
+                                class="d-flex justify-content-between align-items-start"
+                            >
+
+                                <div>
+
+                                    <p class="text-secondary mb-2">
+                                        On Leave
+                                    </p>
+
+                                    <h2 class="fw-bold mb-0">
+                                        2
+                                    </h2>
+
+                                </div>
+
+
+                                <div class="icon-box">
+
+                                    <i class="bi bi-calendar2-minus"></i>
+
+                                </div>
+
+                            </div>
+
+                            <small class="text-secondary d-block mt-3">
+
+                                Currently unavailable
+
+                            </small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EMPLOYEE TABLE
+             ================================================= -->
+
+        <section class="pb-5">
+
+            <div class="container">
+
+
+                <div class="hero-card rounded-4 overflow-hidden">
+
+
+                    <!-- TABLE HEADER -->
+
+                    <div class="p-4 border-bottom border-secondary">
+
+                        <div
+                            class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3"
+                        >
+
+                            <div>
+
+                                <h3 class="fw-bold mb-1">
+                                    Employee Overview
+                                </h3>
+
+                                <p class="text-secondary mb-0">
+                                    Current employee records and status.
+                                </p>
+
+                            </div>
+
+
+                            <span class="badge rounded-pill text-bg-primary">
+
+                                <i class="bi bi-database me-1"></i>
+
+                                Static Data
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- RESPONSIVE TABLE -->
+
+                    <div class="table-responsive">
+
+                        <table
+                            class="table table-dark table-hover align-middle mb-0"
+                        >
+
+                            <thead>
+
+                                <tr>
+
+                                    <th scope="col">
+                                        #
+                                    </th>
+
+                                    <th scope="col">
+                                        Employee
+                                    </th>
+
+                                    <th scope="col">
+                                        Role
+                                    </th>
+
+                                    <th scope="col">
+                                        Department
+                                    </th>
+
+                                    <th scope="col">
+                                        Email
+                                    </th>
+
+                                    <th scope="col">
+                                        Joining Date
+                                    </th>
+
+                                    <th scope="col">
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+
+                                <!-- EMPLOYEE 1 -->
+
+                                <tr>
+
+                                    <td>
+                                        01
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Ayesha Khan
+                                    </td>
+
+                                    <td>
+                                        Senior Frontend Developer
+                                    </td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        ayesha.khan@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        14 Mar 2021
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 2 -->
+
+                                <tr>
+
+                                    <td>
+                                        02
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Hamza Ali
+                                    </td>
+
+                                    <td>
+                                        Backend Developer
+                                    </td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        hamza.ali@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        01 Jul 2022
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-info">
+                                            Remote
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 3 -->
+
+                                <tr>
+
+                                    <td>
+                                        03
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Sara Ahmed
+                                    </td>
+
+                                    <td>
+                                        UI/UX Designer
+                                    </td>
+
+                                    <td>
+                                        Design
+                                    </td>
+
+                                    <td>
+                                        sara.ahmed@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        23 Nov 2020
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 4 -->
+
+                                <tr>
+
+                                    <td>
+                                        04
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Bilal Raza
+                                    </td>
+
+                                    <td>
+                                        DevOps Engineer
+                                    </td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        bilal.raza@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        09 Jan 2023
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-warning">
+                                            On Leave
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 5 -->
+
+                                <tr>
+
+                                    <td>
+                                        05
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Fatima Noor
+                                    </td>
+
+                                    <td>
+                                        Data Analyst
+                                    </td>
+
+                                    <td>
+                                        Data
+                                    </td>
+
+                                    <td>
+                                        fatima.noor@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        18 Feb 2022
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 6 -->
+
+                                <tr>
+
+                                    <td>
+                                        06
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Zain Malik
+                                    </td>
+
+                                    <td>
+                                        Software Engineer
+                                    </td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        zain.malik@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        11 Aug 2023
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-info">
+                                            Remote
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 7 -->
+
+                                <tr>
+
+                                    <td>
+                                        07
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Hira Shah
+                                    </td>
+
+                                    <td>
+                                        Product Manager
+                                    </td>
+
+                                    <td>
+                                        Product
+                                    </td>
+
+                                    <td>
+                                        hira.shah@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        05 May 2021
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 8 -->
+
+                                <tr>
+
+                                    <td>
+                                        08
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Usman Tariq
+                                    </td>
+
+                                    <td>
+                                        Cloud Engineer
+                                    </td>
+
+                                    <td>
+                                        Cloud
+                                    </td>
+
+                                    <td>
+                                        usman.tariq@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        17 Oct 2022
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 9 -->
+
+                                <tr>
+
+                                    <td>
+                                        09
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Maryam Asif
+                                    </td>
+
+                                    <td>
+                                        Marketing Specialist
+                                    </td>
+
+                                    <td>
+                                        Marketing
+                                    </td>
+
+                                    <td>
+                                        maryam.asif@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        21 Jun 2024
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-info">
+                                            Remote
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 10 -->
+
+                                <tr>
+
+                                    <td>
+                                        10
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Daniyal Ahmed
+                                    </td>
+
+                                    <td>
+                                        QA Engineer
+                                    </td>
+
+                                    <td>
+                                        Quality Assurance
+                                    </td>
+
+                                    <td>
+                                        daniyal.ahmed@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        12 Feb 2024
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 11 -->
+
+                                <tr>
+
+                                    <td>
+                                        11
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Noor Fatima
+                                    </td>
+
+                                    <td>
+                                        HR Executive
+                                    </td>
+
+                                    <td>
+                                        Human Resources
+                                    </td>
+
+                                    <td>
+                                        noor.fatima@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        03 Sep 2023
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-warning">
+                                            On Leave
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+
+                                <!-- EMPLOYEE 12 -->
+
+                                <tr>
+
+                                    <td>
+                                        12
+                                    </td>
+
+                                    <td class="fw-semibold">
+                                        Ahmed Hassan
+                                    </td>
+
+                                    <td>
+                                        Mobile Developer
+                                    </td>
+
+                                    <td>
+                                        Engineering
+                                    </td>
+
+                                    <td>
+                                        ahmed.hassan@nexus-tech.com
+                                    </td>
+
+                                    <td>
+                                        28 Jan 2025
+                                    </td>
+
+                                    <td>
+
+                                        <span class="badge text-bg-success">
+                                            Active
+                                        </span>
+
+                                    </td>
+
+                                </tr>
+
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             INFORMATION SECTION
+             ================================================= -->
+
+        <section class="pb-5">
+
+            <div class="container">
+
+                <div class="cta-card rounded-4 p-4 p-md-5">
+
+                    <div class="row align-items-center g-4">
+
+                        <div class="col-lg-8">
+
+                            <span class="text-primary fw-semibold">
+                                NEXUS WORKFORCE
+                            </span>
+
+                            <h3 class="fw-bold mt-2">
+                                One workspace. Clear information.
+                            </h3>
+
+                            <p class="text-secondary mb-0">
+                                This dashboard uses static employee records
+                                for demonstration purposes as required by
+                                the internship task.
+                            </p>
+
+                        </div>
+
+
+                        <div class="col-lg-4 text-lg-end">
+
+                            <a
+                                href="index.html"
+                                class="btn btn-outline-light"
+                            >
+
+                                <i class="bi bi-arrow-left me-2"></i>
+
+                                Back to Home
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="footer-section pt-5 pb-3">
+
+        <div class="container">
+
+            <div class="row g-4">
+
+
+                <!-- COMPANY -->
+
+                <div class="col-lg-4">
+
+                    <h4 class="fw-bold">
+
+                        <i class="bi bi-cpu me-2"></i>
+
+                        NEXUS
+
+                    </h4>
+
+                    <p class="text-secondary mt-3">
+
+                        Building modern digital solutions that help
+                        organizations innovate, develop and elevate.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="col-6 col-lg-2">
+
+                    <h6 class="fw-bold">
+                        Quick Links
+                    </h6>
+
+                    <ul class="list-unstyled footer-links">
+
+                        <li>
+                            <a href="index.html">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="signup.html">
+                                Sign Up
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="dashboard.html">
+                                Dashboard
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- COMPANY LINKS -->
+
+                <div class="col-6 col-lg-2">
+
+                    <h6 class="fw-bold">
+                        Company
+                    </h6>
+
+                    <ul class="list-unstyled footer-links">
+
+                        <li>
+                            <a href="#">
+                                About Us
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Careers
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Privacy Policy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                Terms
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="col-lg-4">
+
+                    <h6 class="fw-bold">
+                        Contact
+                    </h6>
+
+                    <ul class="list-unstyled footer-links">
+
+                        <li>
+
+                            <i class="bi bi-envelope me-2"></i>
+
+                            hello@nexus-tech.com
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-telephone me-2"></i>
+
+                            +92 300 1234567
+
+                        </li>
+
+
+                        <li>
+
+                            <i class="bi bi-geo-alt me-2"></i>
+
+                            Lahore, Pakistan
+
+                        </li>
+
+                    </ul>
+
+
+                    <div class="social-links mt-3">
+
+                        <a
+                            href="#"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="GitHub"
+                        >
+                            <i class="bi bi-github"></i>
+                        </a>
+
+
+                        <a
+                            href="#"
+                            aria-label="X"
+                        >
+                            <i class="bi bi-twitter-x"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <hr class="my-4">
+
+
+            <div class="text-center text-secondary small">
+
+                © 2026 Nexus Technologies.
+                All rights reserved.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+
+</body>
+
+</html>
